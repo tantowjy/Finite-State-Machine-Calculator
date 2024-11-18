@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at FSM_Calculator.v(6): object "result" differs only in case from object "RESULT" in the same scope File: A:/A3/Git/Finite-State-Machine-Calculator/FSM/FSM_Calculator.v Line: 6
+Info (10281): Verilog HDL Declaration information at FSM_Calculator_3.v(8): object "result" differs only in case from object "RESULT" in the same scope File: A:/A3/Git/Finite-State-Machine-Calculator/FSM/FSM_Calculator_3.v Line: 8

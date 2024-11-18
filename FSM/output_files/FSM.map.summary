@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Sun Nov 17 23:50:14 2024
+Analysis & Synthesis Status : Successful - Mon Nov 18 20:47:45 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : FSM
-Top-level Entity Name : ALU
+Top-level Entity Name : FSM_Calculator_3
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 0
-Total pins : 62
+Total registers : 42
+Total pins : 42
 Total virtual pins : 0
 Total block memory bits : 0
-Total DSP Blocks : 0
+Total DSP Blocks : 1
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
