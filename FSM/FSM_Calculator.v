@@ -16,7 +16,7 @@ module FSM_Calculator (
     
     parameter [2:0] ADD = 3'b001, SUB = 3'b010, MUL = 3'b011, DIV = 3'b100;
 
-    parameter IDLE = 3'b000, INPUT1 = 3'b001, INPUT2 = 3'b010, RESULT = 3'b011, COMPUTE = 3'b100;
+    parameter IDLE = 3'b000, INPUT1 = 3'b001, INPUT2 = 3'b010, RESULT = 3'b011;
 
     always @(posedge clk or posedge clear) begin
         if (clear) begin
@@ -30,7 +30,6 @@ module FSM_Calculator (
             case (state)
                 // IDLE state: Menunggu input digit pertama dan inisialisasi ulang variabel
                 IDLE: begin
-
                     // Menerima satu digit angka pertama (0-9)
                     if (button_num >= NUM_0 && button_num <= NUM_9) begin
                         num1 <= button_num;
@@ -39,7 +38,6 @@ module FSM_Calculator (
                         result <= 16'b0;        // Set hasil ke 0
                         state <= INPUT1;
                     end
-
                 end
 
                 // INPUT1 state: Menunggu input operasi setelah angka pertama diinput
@@ -57,7 +55,6 @@ module FSM_Calculator (
                     if (clear) begin
                         state <= IDLE;
                     end else if (button_num >= NUM_0 && button_num <= NUM_9) begin
-
                         // Melakukan operasi sesuai dengan jenis operasi yang dipilih 
                         case (operation)
                             ADD: result_temp <= num1 + button_num;
@@ -65,7 +62,7 @@ module FSM_Calculator (
                             MUL: result_temp <= num1 * button_num;
                             DIV: result_temp <= button_num != 0 ? num1 / button_num : 16'd0; // Cek pembagian dengan 0
                         endcase
-
+                        // state <= RESULT;
                         state <= RESULT;
                     end
                 end
@@ -76,31 +73,16 @@ module FSM_Calculator (
                         state <= IDLE;
                     end else if (equal) begin
                         result <= result_temp;
-                        state <= COMPUTE;  
+                        state <= RESULT; 
                     end else if (button_op >= ADD && button_op <= DIV) begin
                         num1 <= result_temp[7:0];          
                         operation <= button_op;
                         state <= INPUT2;  
-                    end else begin
-                        state <= IDLE;
-                    end
-                end
-
-                // COMPUTE state
-                COMPUTE: begin
-                    if (clear) begin
-                        state <= IDLE;
-                    end else if (equal) begin
-                        state <= RESULT;
                     end else if (button_num >= NUM_0 && button_num <= NUM_9) begin
                         num1 <= button_num;
                         result_temp <= 16'b0;   // Set hasil sementara ke 0
                         result <= 16'b0;        // Set hasil ke 0
                         state <= INPUT1;
-                    end else begin
-                        num1 <= result_temp[7:0];
-                        operation <= button_op;
-                        state <= INPUT2;
                     end
                 end
 

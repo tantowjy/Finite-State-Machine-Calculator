@@ -1,12 +1,12 @@
-Fitter Status : Successful - Mon Nov 18 20:48:28 2024
+Fitter Status : Successful - Mon Nov 18 22:54:17 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : FSM
-Top-level Entity Name : FSM_Calculator_3
+Top-level Entity Name : FSM_Calculator_Dev
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
 Logic utilization (in ALMs) : 80 / 32,070 ( < 1 % )
-Total registers : 42
+Total registers : 41
 Total pins : 42 / 457 ( 9 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )

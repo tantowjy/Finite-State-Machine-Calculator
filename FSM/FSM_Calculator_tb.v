@@ -28,7 +28,6 @@ module FSM_Calculator_tb;
         button_op = 3'b0;
         equal = 0;
         
-
         // Apply reset using clear
         clear = 1; #10;
         clear = 0;
@@ -38,6 +37,7 @@ module FSM_Calculator_tb;
         button_num = 4'd5; #10;
         // Input operation (ADD)
         button_op = 3'b001; #10;
+        button_op = 3'b0;
         // Input second number (3)
         button_num = 4'd3; #10;
         // Wait for result (EQUAL)
@@ -52,10 +52,12 @@ module FSM_Calculator_tb;
         button_num = 4'd5; #10;
         // Input operation (SUB)
         button_op = 3'b010; #10;
+        button_op = 3'b0;
         // Input second number (3)
         button_num = 4'd3; #10;
         // Input operation (ADD)
         button_op = 3'b001; #10;
+        button_op = 3'b0;
         // Input third number (2)
         button_num = 4'd2; #10;
         // Wait for result (EQUAL)
@@ -67,6 +69,7 @@ module FSM_Calculator_tb;
         button_num = 4'd6; #10;
         // Input operation (DIV)
         button_op = 3'b100; #10;
+        button_op = 3'b0;
         // Input second number (3)
         button_num = 4'd3; #10;
         // Wait for result (EQUAL)
@@ -74,6 +77,7 @@ module FSM_Calculator_tb;
         equal = 0;
         // Input operation (MUL)
         button_op = 3'b011; #10;
+        button_op = 3'b0;
         // Input third number (8)
         button_num = 4'd8; #10;
         // Wait for result (EQUAL)
