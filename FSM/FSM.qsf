@@ -65,8 +65,6 @@ set_global_assignment -name VERILOG_FILE ALU.v
 set_global_assignment -name VERILOG_FILE ALU_tb.v
 set_global_assignment -name VERILOG_FILE FSM_Calculator.v
 set_global_assignment -name VERILOG_FILE FSM_Calculator_tb.v
-set_global_assignment -name VERILOG_FILE FSM_Calculator_Dev_tb.v
-set_global_assignment -name VERILOG_FILE FSM_Calculator_Dev.v
 set_global_assignment -name VERILOG_FILE FSM_Calculator_ALU.v
 set_global_assignment -name VERILOG_FILE FSM_Calculator_ALU_tb.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
