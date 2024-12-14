@@ -39,16 +39,15 @@ module FSM_Calculator_ALU(
     
     parameter [2:0] ADD = 3'b001, SUB = 3'b010, MUL = 3'b011, DIV = 3'b100;
 
-    // parameter IDLE = 3'b000, INPUT1 = 3'b001, INPUT2 = 3'b010, RESULT = 3'b011;
     parameter IDLE = 3'b000, INPUT1 = 3'b001, INPUT2 = 3'b010, OPERATE = 3'b011, RESULT = 3'b100;
 
     // Logika pemetaan tombol ke nilai numerik dan operator
     always @(*) begin
         // Default values
-        button_num = 4'b0; // Nilai default untuk numerik (tidak dikenal)
-        button_op = 3'b0;  // Nilai default untuk operator (tidak ada)
-        equal = 1'b0; // Default bukan tombol '='
-        clear = 1'b0; // Default bukan tombol 'Clear'
+        button_num = 4'b0;  // Nilai default untuk numerik (tidak dikenal)
+        button_op = 3'b0;   // Nilai default untuk operator (tidak ada)
+        equal = 1'b0;       // Default bukan tombol '='
+        clear = 1'b0;       // Default bukan tombol 'Clear'
 
         case (button)
             // Numerik
@@ -182,5 +181,4 @@ module FSM_Calculator_ALU(
         end
     end
 
-endmodule
-
+endmodule 
