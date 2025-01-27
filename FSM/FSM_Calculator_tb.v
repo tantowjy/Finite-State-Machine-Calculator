@@ -1,4 +1,4 @@
-module FSM_Calculator_ALU_tb;
+module FSM_Calculator_tb;
     reg clk;
     reg [7:0] button;                   // Input tombol 8-bit
     wire clear;                         // Tombol "Clear" (output dari modul)
@@ -8,7 +8,7 @@ module FSM_Calculator_ALU_tb;
     wire [15:0] result_temp, result;    // Output hasil sementara dan akhir
 
     // Instantiate the FSM_Calculator module
-    FSM_Calculator_ALU uut (
+    FSM_Calculator uut (
         .clk(clk),
         .button(button),
         .clear(clear),

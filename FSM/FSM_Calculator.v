@@ -1,4 +1,4 @@
-module FSM_Calculator_ALU(
+module FSM_Calculator (
     input clk,
     input [7:0] button,
     output reg clear,
